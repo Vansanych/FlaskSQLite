@@ -17,6 +17,7 @@ def connect_db():
     conn.row_factory = sqlite3.Row
     return conn
 
+
 def create_db():
     db = connect_db()
     with app.open_resource('sq_db.sql', mode='r') as f:
